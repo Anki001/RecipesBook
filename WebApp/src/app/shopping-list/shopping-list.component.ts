@@ -19,5 +19,9 @@ ngOnInit() {
   this.slService.ingredientChange.subscribe((ingredients:Ingredient[])=>{this.ingredients=ingredients;});
 }
 
+onEditItem(index:number){
+  this.slService.startedEditing.next(index);
+}
+
 
 }
